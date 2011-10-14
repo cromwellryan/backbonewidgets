@@ -1,6 +1,6 @@
 $(function () {
 	var Todo = function (containerElement) {
-		var parentElement = containerElement;
+		this.parentElement = containerElement;
 	};
 
 	Todo.prototype = function () {
@@ -43,6 +43,7 @@ $(function () {
 					{Title: "Sweep"}, 
 					{Title: "Wash Face"}] );
 				var view = new TodoList({ collection: todos });
+				view.render();
 			}
 		});
 
